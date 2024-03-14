@@ -3,18 +3,19 @@
 """
 101-safely_get_value
 """
+from typing import Any, Mapping, Union, TypeVar
 
-from typing import Mapping, Any, Union
+
+T = TypeVar('T')
+Res = Union[Any, T]
+Def = Union[T, None]
 
 
 def safely_get_value(
-        dct: Mapping[Any, Any],
-        key: Any, default: Union[None, Any] = None
-        ) -> Union[Any, None]:
-    """
-    Retrieves a value from a dictionary
-    with a default if the key is missing.
-    """
+        dct: Mapping, key: Any, default: Def = None) -> Res:
+    '''
+    Retrieves a value from a dict using a given key.
+    '''
     if key in dct:
         return dct[key]
     else:
