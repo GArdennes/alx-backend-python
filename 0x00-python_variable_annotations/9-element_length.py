@@ -4,11 +4,11 @@
 9-element_length
 """
 
-from typing import Sequence, List, Tuple
+from typing import Iterable, Sequence, List, Tuple
 
 
 def element_length(
-        lst: Sequence[str]) -> List[Tuple[str, int]]:
+        lst: Iterable[Sequence]) -> List[Tuple[str, int]]:
     """
     Function takes a list of strings
     Returns a list of tuples containing the string
