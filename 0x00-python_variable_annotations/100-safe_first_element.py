@@ -4,10 +4,11 @@
 100-safe_first_element
 """
 
-from typing import Sequence
+from typing import Any, Sequence, Union
 
 
-def safe_first_element(lst: Sequence) -> object:
+def safe_first_element(
+        lst: Sequence[Any]) -> Union[Any, Union]:
     """
     Returns the first element of a sequence
     or None if the sequence is empty.
