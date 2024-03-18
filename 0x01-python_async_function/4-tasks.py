@@ -3,10 +3,11 @@
 4-tasks
 """
 import asyncio
-task_wait_random = __import__("0-basic_async_syntax").task_wait_random
+from typing import List
+task_wait_random = __import__("3-tasks").task_wait_random
 
 
-async def task_wait_n(n, max_delay):
+async def task_wait_n(n: int, max_delay: int) -> List[float]:
     """
     Waits for n random delays concurrently using tasks,
     returning results in ascending order.
